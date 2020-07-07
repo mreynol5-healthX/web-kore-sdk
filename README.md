@@ -262,6 +262,13 @@ Install node js if not installed  https://nodejs.org
   -  Refer custom folder under UI folder
   -  Refer https://github.com/Koredotcom/web-kore-sdk/blob/master/UI/custom/customTemplate.js and https://github.com/Koredotcom/web-kore-sdk/blob/master/UI/custom/customTemplate.css files for sample code snippet. 
   
+## How to integrate Amazon Polly TTS
+1. Uncomment amazon polly files 'plugins/aws-sdk-2.668.0.min.js' and 'plugins/kore-aws-polly.js' in index.html
+2. Provide AWS "REGION" and "IDENTITY_POOL_ID" in plugins/kore-aws-polly.js which can be generated from AWS web console by following the instructions here
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-browser.html#getting-started-browser-iam-role
+3. Set chatConfig.ttsInterface in kore-config.js to "awspolly".
+(Web-sdk may not work properly incase compatability mode is on with IE older versions)
+4. Set chatConfig.isTTSEnabled to "true"
 
 # How to implement minified SDK
     node js:
