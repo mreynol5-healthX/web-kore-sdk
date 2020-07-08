@@ -71,6 +71,7 @@ Integration of Kore.ai chat UI into your App. Clone the repository and create yo
 	<script type="text/javascript" src="../libs/client_api.js"></script> -->
 
 #### 6. Define the assertion function (Should be defined by the clients)
+	    //SECURITY RECOMMENDATION:Instead of sending the 'clientId' and  'clientSecret' from browser javascript, store it in server and use it during the jwt generation.
         //NOTE:clients has to define a API which should generate and return the JWT token. and do the necessary changes in the below function like change the url,type,Authorization and on success set the returned jwt.
         //fields to set in JWT:subject(emailId),issuer(clientId),algorithm(HS256 or RS256)
 
@@ -279,6 +280,11 @@ https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-starte
         -> Add the following lines
             <link href="dist/kore-ai-sdk.min.css" rel="stylesheet"/>
             <script src="dist/kore-ai-sdk.min.js" type="text/javascript"> </script>  
+
+# How to resolve conflicts with existing libraries like jquery, require, etc..
+	1. Add "libs/kore-no-conflict-start.js" before kore SDK files which will stores your library references.
+	2.Add "libs/kore-no-conflict-end.js" after kore SDK files which will reassign your library references.
+	In our sample UI/index.html it is been included already.			
 
 ```
 
