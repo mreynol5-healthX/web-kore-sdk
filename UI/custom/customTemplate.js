@@ -865,7 +865,7 @@ var tableListTemplate = '<script id="chat_message_tmpl" type="text/x-jqury-tmpl"
 							<div class="{{if msgData.message[0].component.payload.fromHistory}}dummy listTableContainerDiv {{else}}listTableContainerDiv{{/if}} ">\
                 <div class="listTableContainerDivRepet">\
                 <div class="listTableContainer">\
-                {{each(index,element) msgData.message[0].component.elements}}\
+                {{each(index,element) msgData.message[0].component.payload.elements}}\
                         <div class="listTableDetailsBorderDiv">\
                                 <div class="listTableDetails">\
                                 <div class="listTableHeader">\
@@ -1258,7 +1258,7 @@ print(JSON.stringify(message)); */
 		 }
 		 });
 		/* New List Template click functions ends here*/
-		$(messageHtml).off('click', '.listViewItemValue.actionLink.action,.listTableDetailsDesc').on('click', '.listViewItemValue.actionLink.action,.listTableDetailsDesc', function () {
+		$(messageHtml).off('click', '.listViewItemValue.actionLink,.listTableDetailsDesc').on('click', '.listViewItemValue.actionLink,.listTableDetailsDesc', function () {
 			var _self=this;
 			valueClick(_self);
 		});
