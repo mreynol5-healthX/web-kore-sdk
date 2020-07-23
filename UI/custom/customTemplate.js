@@ -886,7 +886,7 @@ var tableListTemplate = '<script id="chat_message_tmpl" type="text/x-jqury-tmpl"
                                       {{/if}}\
                                         <div class="listTableDetailsDescSub ">\
                                         {{if (msgItem.title && msgItem.title.type && msgItem.title.type ==="url")}}\
-                                        <div class="listTableDetailsDescName {{if msgItem.value && msgItem.value.layout && msgItem.value.layout.align}}${msgItem.value.layout.align}{{/if}} {{if !msgItem.default_action}} pointer {{/if}}">\
+                                        <div class="listTableDetailsDescName">\
                                         <div actionObj="${JSON.stringify(msgItem.title.url)}" type="${msgItem.title.type}" url="${msgItem.title.url.link}" class="listViewItemValue actionLink actiontitle {{if !msgItem.subtitle}}top10{{/if}}">${msgItem.title.url.title}</div>\
                                         </div>{{else}}\
                                         <p class="listTableDetailsDescName">${msgItem.title.text.title}</p>\
