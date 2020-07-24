@@ -831,12 +831,12 @@
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainerDivRepet{
     width: 100%;
 }
-.kore-chat-window .kore-chat-body .listTableContainerDiv .listTableHeader{
+/* .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableHeader{
     /* height: 52px; */
-    background-color: var(--sdk-chat-widow-primary-bg-color);
-    display: flex;
-    padding: 15px;
-}
+    /* background-color: var(--sdk-chat-widow-primary-bg-color); */
+    /* display: flex;
+    padding: 10px; */
+/* }  */
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableHeader .listTableHeaderTitle{
     font-size: 16px;
     font-weight: bold;
@@ -975,10 +975,18 @@
     display: block;
 }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainerDivRepet .listTableDetails .listTableHeader{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+    display:flex;
+    padding:10px;
+    color: var(--sdk-chat-widow-primary-font-color);
 }
+.kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainerDivRepet .listTableDetails .listTableHeader .listTableHeaderDesc .headerDesc{
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainerDivRepet .listTableDetails .listTableDetailsDescName.pointer:hover{
     cursor: pointer !important;
 }
