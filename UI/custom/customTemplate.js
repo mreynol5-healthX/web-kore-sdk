@@ -885,7 +885,7 @@ var tableListTemplate = '<script id="chat_message_tmpl" type="text/x-jqury-tmpl"
                                           {{/if}}\
                                         </div>\
                                       {{/if}}\
-                                        <div class="listTableDetailsDescSub ">\
+									  <div class="listTableDetailsDescSub " {{if msgItem && msgItem.title && msgItem.title.rowColor}} style="color:${msgItem.title.rowColor}"{{/if}} >\
                                         {{if (msgItem && msgItem.title && msgItem.title.type && msgItem.title.type ==="url")}}\
                                         <div class="listTableDetailsDescName">\
                                         <div actionObj="${JSON.stringify(msgItem.title.url)}" type="${msgItem.title.type}" url="${msgItem.title.url.link}" class="listViewItemValue actionLink actiontitle {{if !msgItem.subtitle}}top10{{/if}}">${msgItem.title.url.title}</div>\
@@ -912,9 +912,9 @@ var tableListTemplate = '<script id="chat_message_tmpl" type="text/x-jqury-tmpl"
                                                 {{/if}}\
                                             </div>\
                                           {{/if}}\
-                                          {{if (msgItem.value && msgItem.value.type === "url" && msgItem.value.url.link && msgItem.value.url.title)}}\
+										  {{if (msgItem.value && msgItem.value.type === "url" && msgItem.value.url)}}\
                                             <div class="titleActions {{if msgItem.value && msgItem.value.layout && msgItem.value.layout.align}}${msgItem.value.layout.align}{{/if}}" {{if msgItem.value && msgItem.value.layout && (msgItem.value.layout.colSize || msgItem.value.layout.color)}} style="width:${msgItem.value.layout.colSize};color:${msgItem.value.layout.color}"{{/if}}>\
-                                                <div actionObj="${JSON.stringify(msgItem.value.url)}" type="${msgItem.value.type}" url="${msgItem.value.url.link}"class="listViewItemValue actionLink action {{if !msgItem.subtitle}}top10{{/if}}">${msgItem.value.url.title}</div>\
+											{{if msgItem && msgItem.value && msgItem.value.url}} <div actionObj="${JSON.stringify(msgItem.value.url)}" type="${msgItem.value.type}" url="${msgItem.value.url.link}"class="listViewItemValue actionLink actiontitle{{if !msgItem.subtitle}} top10{{/if}}">${msgItem.value.url.title}</div>{{/if}}\
                                             </div>\
                                           {{/if}}\
                                           {{if msgItem.value && msgItem.value.type=="button" && msgItem.value.button && (msgItem.value.button.title || (msgItem.value.button.image && msgItem.value.button.image.image_src))}}\

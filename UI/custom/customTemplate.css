@@ -20,6 +20,7 @@
     --sdk-chat-window-viewmore-btn-color:#0079FF;
     --sdk-chat-window-dropdown-border:#ddd;
     --sdk-chat-window-btn-label-color:#1E90FF;
+    --sdk-chat-window-table-border-color:#D3D3D3;
     --sdk-chat-window-checkbox-label-after-color:#555555;
     --sdk-chat-window-list-template-heading-background-color:#f4f4f4;
     --sdk-chat-window-list-template-sub-title-color:#77869e;
@@ -897,34 +898,37 @@
     display:flex;
     padding:10px;
     color: var(--sdk-chat-widow-primary-font-color);
+    border-bottom: 1px solid var(--sdk-chat-window-table-border-color);
 }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.pointerStyle:hover{
     cursor:pointer;
 }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.largeImg{
     display: flex;
-    /* align-items: center; */
-    margin-bottom: 20px;
-    padding:10px;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px 10px 20px 10px;
 }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.mediumImg{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    padding:10px;
+    margin-bottom: 10px;
+     padding: 10px 10px 20px 10px;
 }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.smallImg{
     display: flex;
     /* align-items: center; */
-    margin-bottom: 20px;
-    padding:10px;
+    margin-bottom: 10px;
+     padding: 10px 10px 20px 10px;
 }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listViewItemValue.actionLink.actiontitle{
     text-decoration: underline;
     cursor: pointer;
+    display:inline-block;
 }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc:nth-last-child(1){
     margin-bottom: 0;
+    border-bottom: 0;
 }
 .kore-chat-window .kore-chat-body .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc .listTableDetailsDescSub {
     /* float: left; */
