@@ -131,51 +131,21 @@
 .kr-wiz-content-css .listTableContainerDiv{
     background-color: #ffffff;
     box-shadow: 0 1px 5px 0 rgba(179, 186, 200, 0.58);
-    border-radius: 10px;
-    display: flex
+    border-radius: 10px;    
 }
 
 .kr-wiz-content-css .listTableContainerDiv .listTableContainerDivRepet{
     width: 100%;
 }
-.kr-wiz-content-css .listTableContainerDiv .listTableHeader{
-    /* height: 52px; */
-    background-color: #f2f3f5;
-    display: flex;
-    padding: 15px;
-}
-.kr-wiz-content-css .listTableContainerDiv .listTableHeader .listTableHeaderTitle{
-    font-size: 16px;
-    font-weight: bold;
-    color: #26344a;
-    width: 100%;
-    display: block;
-    float: left;
-}
-.kr-wiz-content-css .listTableContainerDiv .listTableHeader .listtableHeaderFilters{
-    width: 120px;
-    display: block;
-    float: left;
-    text-align: right;
-}
-.kr-wiz-content-css .listTableContainerDiv .listTableHeader .listtableHeaderFilters .filterIcon{
-    width: 15px;
-    cursor: pointer;
-    display: inline-block;
-}
-.kr-wiz-content-css .listTableContainerDiv .listTableHeader .listtableHeaderFilters .sortingIcon{
-    width: 15px;
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 20px;
-}
+
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer{
     padding: 0 15px;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv{
     border-bottom: 1px solid #e5e8ec;
      padding: 15px 0;
-     display: flex;
+     display: table;
+     width: 100%;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv:nth-last-child(1){
     border-bottom: 0;
@@ -192,26 +162,34 @@
     color: #26344a;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.largeImg{
-    display: flex;
-    /* align-items: center; */
+    display: table;
+    width: 100%;
     margin-bottom: 20px;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.mediumImg{
-    display: flex;
-    align-items: center;
+    display: table;
+    width: 100%;
     margin-bottom: 20px;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.smallImg{
-    display: flex;
-    /* align-items: center; */
+    display: table;
+    width: 100%;
     margin-bottom: 20px;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc:nth-last-child(1){
     margin-bottom: 0;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc .listTableDetailsDescSub {
-    /* float: left; */
-    flex: 100%;
+    width: 65%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+.kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc .titleActions{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    width: 25%;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc .listTableDetailsDescSub .listTableDetailsDescName{
     font-size: 12px;
@@ -228,21 +206,39 @@
 }
 
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.largeImg .listTableBigImgConytainer{
-    flex: 50px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.mediumImg .listTableBigImgConytainer{
-    flex: 30px;
+    width: 30px;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.largeImg .listTableBigImgConytainer img{
+    width: 50px;
+    height: 50px;
+}
+.kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.mediumImg .listTableBigImgConytainer img{
+    width: 30px;
+    height: 30px;
+}
+.kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.smallImg .listTableBigImgConytainer img{
+    width: 20px;
     height: 20px;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc.smallImg .listTableBigImgConytainer{
-    flex: 20px;
-    height: 10px;
-    padding-top:3px;
+    width: 20px;
+    height: 20px;
+    display: table-cell;
+    vertical-align: middle;
 }
-.kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc .listTableBigImgConytainer img{
-    padding-right: 10px;
+.kr-wiz-content-css .listTableContainerDiv .listTableContainer .listTableDetailsBorderDiv .listTableDetails .listTableDetailsDesc .listTableBigImgConytainer img{    
     max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 .kr-wiz-content-css .listTableContainerDiv .listTableContainerDivRepet .seeMoreFooter{
     padding: 0 15px;
@@ -897,7 +893,7 @@
 }
 .kr-wiz-content-css .tab-list-template .listTemplateContainer .tabsContainer {
     width: 100%;
-    display: flex;
+    display: inline-block;
     text-align: center;
     margin-bottom: 12px;
     padding: 0 10px;
@@ -913,10 +909,6 @@
 }
 
 .kr-wiz-content-css .tab-list-template .listTemplateContainer .tabsContainer .tabs {
-    /* width: 18px;
-            height: 17px; */
-    /* flex: 1 1 auto; */
-    /* font-family: Lato; */
     font-size: 14px;
     font-weight: normal;
     letter-spacing: 0.12px;
@@ -924,6 +916,7 @@
     /* padding-left:103px; */
     cursor: pointer;
     max-width: 170px;
+    float: left;
 }
 
 .kr-wiz-content-css .tab-list-template .listTemplateContainer .tabsContainer .tabs .btnBG {
@@ -1070,6 +1063,7 @@
     margin-top: 10px;
     /* float: left; */
     display: flex;
+    display: -ms-flexbox;
     /* justify-content: center; */
     width: 100%;
     padding: 10px 0 0;
@@ -1080,6 +1074,7 @@
   }
 .kr-wiz-content-css .tab-list-template .listViewTmplContentChild .meetingActionButtons .actionBtns {
     flex: 1 1 auto;
+    -ms-flex: 1 1 auto;  
     /* float: none; */
     padding: 0 10px;
     border-radius: 4px;
@@ -1827,7 +1822,7 @@
     position: absolute;
     right: 0;
     padding-right: 20px;
-    top: 15px;
+    top: 18px;
 }
 .kr-wiz-content-css .mainTemplateCntr .widgetTitle .panelHeaderActions .panelRefresh{
     background-image: var(--sdk-refresh-icon);
@@ -2157,11 +2152,10 @@
     height: 55px;
     font-size: 24px;
     font-weight: bold;
-    letter-spacing: 0.09px;
-    display: flex;
+    letter-spacing: 0.09px;   
     color: var(--sdk-primary-font-color);
     align-items: center;
-    padding: 0 10px;
+    padding: 12px 10px;
     /* border-bottom: 1px solid var(--sdk-primary-border-color); */
     /* background: var(--sdk-panel-header-bg-color); */
     position: relative;
@@ -2171,7 +2165,8 @@
     clear: both;
     /* border-bottom: 1px solid var(--sdk-primary-border-color); */
     padding: 20px;
-    display: flex;
+    display: inline-block;
+    width: 100%;
 }
 .kr-wiz-content-css .mainTemplateCntr .panelHeader .headerLeft{
     float: left;
@@ -2461,11 +2456,12 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: 0.09px;
-    display: flex;
+    display: inline-block;
     color: var(--sdk-primary-font-color);
     align-items: center;
-    padding: 0 10px;
+    padding: 12px 10px;
     border-bottom: 1px solid var(--sdk-primary-border-color);
+    width: 100%;
 }
 
 .kr-wiz-content-css .viewMoreCntr .panelHeader {
@@ -2563,6 +2559,8 @@
     transform: rotate(180deg);
     width: 22px;
     height: 6px;
+    position: relative;
+    top: -2px;
 }
 
 .kr-wiz-content-css .viewMoreCntr .taskSelectCntr {
@@ -3503,7 +3501,7 @@
 
 .kr-wiz-content-css .widgetWindow .overlayContentBox {
     max-width: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     background: var(--widget-bg-one);
     color: var(--sdk-primary-font-color);
@@ -6806,6 +6804,8 @@
         overflow: hidden;
         text-overflow: ellipsis;
         display: inline-block;
+        position: relative;
+        top: -4px;
     }
     .kr-wiz-content-css .mainTemplateCntr .mainTemplateBdr.scroll{
         padding: 10px;

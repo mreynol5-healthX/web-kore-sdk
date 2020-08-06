@@ -352,9 +352,9 @@
     padding: 3px !important;
     border: 0;
     border-radius: 4px !important;
-    display: flex;
     background: transparent;
     color: #000000;
+    display: block;
 } 
 .darkTheme.kore-chat-window  .kore-action-sheet .clockPickerContainer .clockpicker-popover .clockpicker-button.am-button,.darkTheme.kore-chat-window  .kore-action-sheet .clockPickerContainer .clockpicker-popover .clockpicker-button.pm-button{
     color: #ffffff;
@@ -363,11 +363,7 @@
     right: 0;
     position: absolute;
     top: 0;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 36%;
     padding: 20px;
 }
 .kore-chat-window .kore-action-sheet .clockPickerContainer{
@@ -421,11 +417,7 @@
     margin-top:5px;
     padding: 0 6px;
 }
-.kore-chat-window .kore-action-sheet .datePickerContainer .date-picker-wrapper {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .kore-chat-window .kore-action-sheet .datePickerContainer{
     position: relative;
     padding-bottom: 57px;
@@ -545,6 +537,7 @@
 }
 .datePickerContainer .date-picker-wrapper{
     font-size: 15px !important;
+    width: 100%;
 }
 .datePickerContainer .date-picker-wrapper .month-wrapper table th{
     font-size:12px;
@@ -580,6 +573,7 @@
     text-align: center;
     width: 225px;
     height: 221px;
+    margin: 0 auto;
 }
 .datePickerContainer .date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev {
     border-radius: 50%!important;
@@ -767,10 +761,8 @@
     margin-left: 15px !important;
 }
 .dateRangePickerContainer .date-picker-wrapper{
-    font-size: 15px !important;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 15px !important;    
+    width: 100%;
 }
 .dateRangePickerContainer .date-picker-wrapper .month-wrapper table th{
     font-size:12px;
@@ -801,6 +793,7 @@
     text-align: center;
     width: 225px;
     height: 221px;
+    margin: 0 auto;
 }
 .dateRangePickerContainer .date-picker-wrapper .month-wrapper table {
     width: 100%!important;
