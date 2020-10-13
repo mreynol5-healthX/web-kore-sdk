@@ -169,9 +169,12 @@
                 //   if (compObj && compObj[0] && compObj[0].componentType === "text") {
 
                 var textHasXSS;
-                if (txtStr) {
-                    textHasXSS = txtStr.isNotAllowedHTMLTags();
+                if(!$.isNumeric(txtStr)){
+                    if (txtStr) {
+                        textHasXSS = txtStr.isNotAllowedHTMLTags();
+                    }
                 }
+                
                 if (textHasXSS && !textHasXSS.isValid) {
                     txtStr = txtStr.escapeHTML();
                 }
