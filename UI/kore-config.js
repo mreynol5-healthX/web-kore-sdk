@@ -13,7 +13,7 @@
 
   botOptions.JWTUrl = "https://demodpd.kore.ai/finastraLoginDEMO/token";
   botOptions.userIdentity = '';// Provide users email id here
-  botOptions.botInfo = {name:"","_id":"",customData:{"rtmType":"web"}}// bot name is case sensitive
+  botOptions.botInfo = {name:"Banking Assist","_id":"",customData:{"rtmType":"web"}}// bot name is case sensitive
   // botOptions.clientId = "";
   // botOptions.clientSecret="";
 

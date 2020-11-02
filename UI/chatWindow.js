@@ -3515,8 +3515,11 @@
                 }
             }
             this.botDetails = function (response, botInfo) {
-                if(response && response.botInfo){
-                    chatContainerConfig.config.chatTitle = response.botInfo.name;
+                if(response){
+                    if(response.botName !== ""){
+                        chatContainerConfig.config.chatTitle = response.botName;
+                        $('.kore-chat-header .header-title').html(chatContainerConfig.config.chatTitle).attr('title', chatContainerConfig.config.chatTitle);
+                    }
                     var cssPrefix = "--custom-";
                     var cssBrandingVariables = {
                         "botchatBgColor":"bot-chat-bubble-background-color",
@@ -3535,10 +3538,10 @@
                     var cssVariable = "";
                     
                     // console.log(cssVariable);
-                    for (var key in response.branding) {
+                    for (var key in response) {
                         if(key !== "theme"){
                             cssVariable = cssPrefix + cssBrandingVariables[key];
-                            document.documentElement.style.setProperty(cssVariable,response.branding[key]);
+                            document.documentElement.style.setProperty(cssVariable,response[key]);
                         }
                     }
                     $(".kore-chat-window").addClass('customBranding-theme');

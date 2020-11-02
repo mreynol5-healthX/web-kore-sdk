@@ -105,9 +105,10 @@
                         options.uniqueUserId = data.uniqueUserId;
                         options.handleError = koreBot.showError;
                         options.chatHistory = koreBot.chatHistory;
-                        options.botDetails = koreBot.botDetails(data);
+                        // options.botDetails = koreBot.botDetails(data);
                         callback(null, options);
                         setTimeout(function () {
+                            getBrandingInformation(options);
                             if(options && options.botInfo && options.botInfo.customData && options.botInfo.customData.source === 'finastra'){
                                 CheckRefreshToken(options);
                             } else {
@@ -140,6 +141,32 @@
                 }
             });
         }
+
+        function getBrandingInformation(options){
+            var url = options.koreAPIUrl +'workbench/sdkBranding'
+            $.ajax({
+                url: url,
+                headers: {
+                    'tenantId': window.jwtDetails.userInfo.accountId,
+                    'Authorization': "bearer " + window.jwtDetails.authorization.accessToken,
+                    'Accept-Language':'en_US',
+                    'Accepts-version':'1',
+                    'state':'published'
+                },
+                type: 'get',
+                dataType: 'json',
+                success: function (data) {
+                    options.botDetails = koreBot.botDetails(data);
+                    if (koreBot && koreBot.initToken) {
+                        koreBot.initToken(options);
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+
         var korecookie = localStorage.getItem("korecom");
         var uuid = getQueryStringValue('uid');
         if (uuid) {
