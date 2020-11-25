@@ -11,7 +11,7 @@
   botOptions.koreAnonymousFn = koreAnonymousFn;
   botOptions.recorderWorkerPath = '../libs/recorderWorker.js';
 
-  botOptions.JWTUrl = "https://demodpd.kore.ai/finastraLoginDEMO/token";
+  botOptions.JWTUrl = "https://staging-bankassist.korebots.com/finastra-wrapper/token";
   botOptions.userIdentity = '';// Provide users email id here
   botOptions.botInfo = {name:"Banking Assist","_id":"",customData:{"rtmType":"web"}}// bot name is case sensitive
   // botOptions.clientId = "";
@@ -44,7 +44,7 @@
     graphLib: "d3" ,				// set google, to render google charts.This feature requires loader.js file which is available in google charts documentation.
     googleMapsAPIKey:"",
     minimizeMode:false,             // set true, to show chatwindow in minized mode 
-    supportDelayedMessages:true,    // enable to add support for renderDelay in message nodes which will help to render messages with delay from UI       
+    supportDelayedMessages:false,    // enable to add support for renderDelay in message nodes which will help to render messages with delay from UI       
     pickersConfig:{
       showDatePickerIcon:false,           //set true to show datePicker icon
       showDateRangePickerIcon:false,      //set true to show dateRangePicker icon

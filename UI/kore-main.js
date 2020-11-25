@@ -130,7 +130,7 @@
                 "uniqueUserId":options.uniqueUserId
             };
             $.ajax({
-                url: "https://demodpd.kore.ai/finastraLoginDEMO/uniqueUser",
+                url: "https://staging-bankassist.korebots.com/finastra-wrapper/uniqueUser",
                 type: 'post',
                 data: jsonData,
                 dataType: 'json',
